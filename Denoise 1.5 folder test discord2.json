@@ -1,0 +1,343 @@
+{
+  "8": {
+    "inputs": {
+      "style": "%Y-%m-%d"
+    },
+    "class_type": "Get Date Time String (JPS)",
+    "_meta": {
+      "title": "Get Date Time String (JPS)"
+    }
+  },
+  "9": {
+    "inputs": {
+      "text": "",
+      "clip": [
+        "26",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Prompt)"
+    }
+  },
+  "11": {
+    "inputs": {
+      "input": "De_"
+    },
+    "class_type": "SDVN Simple Any Input",
+    "_meta": {
+      "title": "🔡 Simple Any Input"
+    }
+  },
+  "12": {
+    "inputs": {
+      "pixels": [
+        "24",
+        0
+      ],
+      "vae": [
+        "26",
+        2
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "VAE Encode"
+    }
+  },
+  "16": {
+    "inputs": {
+      "text": [
+        "47",
+        0
+      ],
+      "clip": [
+        "26",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Prompt)"
+    }
+  },
+  "17": {
+    "inputs": {
+      "input": "/content/drive/MyDrive/SD-Data/Export/HiDream/in2/in3",
+      "output_list": "None",
+      "translate": "None",
+      "seed": 400243784434455,
+      "in2": [
+        "8",
+        0
+      ],
+      "in3": [
+        "79",
+        0
+      ]
+    },
+    "class_type": "SDVN Any Input Type",
+    "_meta": {
+      "title": "🔡 Any Input Type"
+    }
+  },
+  "21": {
+    "inputs": {
+      "output_path": [
+        "23",
+        0
+      ],
+      "filename_prefix": [
+        "38",
+        0
+      ],
+      "filename_delimiter": "_",
+      "filename_number_padding": 4,
+      "filename_number_start": "false",
+      "extension": "png",
+      "dpi": 300,
+      "quality": 100,
+      "optimize_image": "true",
+      "lossless_webp": "false",
+      "overwrite_mode": "false",
+      "show_history": "false",
+      "show_history_by_prefix": "true",
+      "embed_workflow": "false",
+      "show_previews": "false",
+      "images": [
+        "25",
+        0
+      ]
+    },
+    "class_type": "Image Save",
+    "_meta": {
+      "title": "Image Save"
+    }
+  },
+  "23": {
+    "inputs": {
+      "input": "in1in2",
+      "output_list": "None",
+      "translate": "None",
+      "seed": 891185631894746,
+      "in1": [
+        "11",
+        0
+      ],
+      "in2": [
+        "79",
+        0
+      ]
+    },
+    "class_type": "SDVN Any Input Type",
+    "_meta": {
+      "title": "🔡 Any Input Type"
+    }
+  },
+  "24": {
+    "inputs": {
+      "max_width": 2048,
+      "max_height": 1600,
+      "min_width": 0,
+      "min_height": 0,
+      "crop_if_required": "no",
+      "images": [
+        "61",
+        0
+      ]
+    },
+    "class_type": "ConstrainImage|pysssss",
+    "_meta": {
+      "title": "Constrain Image 🐍"
+    }
+  },
+  "25": {
+    "inputs": {
+      "samples": [
+        "48",
+        0
+      ],
+      "vae": [
+        "26",
+        2
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "26": {
+    "inputs": {
+      "ckpt_name": "Checkpoint/Flux2-klein-9b.safetensors"
+    },
+    "class_type": "CheckpointLoaderSimple",
+    "_meta": {
+      "title": "Load Checkpoint"
+    }
+  },
+  "38": {
+    "inputs": {
+      "input": "HiDream-denoise_ver_1.5_in1",
+      "output_list": "None",
+      "translate": "None",
+      "seed": 890879063374432,
+      "in1": [
+        "81",
+        0
+      ]
+    },
+    "class_type": "SDVN Any Input Type",
+    "_meta": {
+      "title": "🔡 Any Input Type"
+    }
+  },
+  "47": {
+    "inputs": {
+      "chatbot": "Gemini | 3.1 Flash Lite",
+      "preset": "None",
+      "APIkey": "",
+      "seed": 571878829929009,
+      "main_prompt": "Describe the image in a highly detailed, accurate manner in the style that best matches the images visual identity (for example: cinematic realism, digital painting, cozy slice-of-life art, fantasy concept art, etc.). Write the full description as one continuous paragraph without line breaks, filling about 8–10 lines. Focus on visual accuracy: describe the main subject, secondary elements, lighting direction, color tones, shading, depth, atmosphere, expressions, textures, materials, and any noticeable effects or energy forms. Avoid generic statements and avoid guessing unseen details. Emphasize the composition, pose, proportions, silhouette clarity. simply describe what is visibly present in the image with maximum clarity and precision",
+      "sub_prompt": "",
+      "translate": "None",
+      "file": "",
+      "image": [
+        "24",
+        0
+      ]
+    },
+    "class_type": "SDVN API chatbot",
+    "_meta": {
+      "title": "💬 Chatbot"
+    }
+  },
+  "48": {
+    "inputs": {
+      "ModelType": "Auto",
+      "StepsType": "None",
+      "denoise": [
+        "81",
+        0
+      ],
+      "steps": 6,
+      "cfg": 8,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "seed": 0,
+      "Tiled": false,
+      "tile_width": 1536,
+      "tile_height": 2048,
+      "FluxGuidance": 3.5,
+      "model": [
+        "26",
+        0
+      ],
+      "positive": [
+        "16",
+        0
+      ],
+      "negative": [
+        "9",
+        0
+      ],
+      "latent_image": [
+        "12",
+        0
+      ],
+      "vae": [
+        "26",
+        2
+      ]
+    },
+    "class_type": "SDVN KSampler",
+    "_meta": {
+      "title": "⌛️ KSampler"
+    }
+  },
+  "59": {
+    "inputs": {
+      "count": 0,
+      "total": [
+        "65",
+        3
+      ],
+      "mode": true
+    },
+    "class_type": "ImpactQueueTriggerCountdown",
+    "_meta": {
+      "title": "Queue Trigger (Countdown)"
+    }
+  },
+  "61": {
+    "inputs": {
+      "mode": "incremental_image",
+      "seed": 0,
+      "index": 0,
+      "label": "Batch 001",
+      "path": [
+        "17",
+        0
+      ],
+      "pattern": "*",
+      "allow_RGBA_output": "false",
+      "filename_text_extension": "true"
+    },
+    "class_type": "Load Image Batch",
+    "_meta": {
+      "title": "Load Image Batch"
+    }
+  },
+  "65": {
+    "inputs": {
+      "image": [
+        "77",
+        0
+      ]
+    },
+    "class_type": "GetImageSizeAndCount",
+    "_meta": {
+      "title": "Get Image Size & Count"
+    }
+  },
+  "77": {
+    "inputs": {
+      "directory": [
+        "17",
+        0
+      ],
+      "image_load_cap": 0,
+      "start_index": 0,
+      "load_always": false
+    },
+    "class_type": "LoadImagesFromDir //Inspire",
+    "_meta": {
+      "title": "Load Image Batch From Dir (Inspire)"
+    }
+  },
+  "79": {
+    "inputs": {
+      "param": "tên folder",
+      "value": "",
+      "description": "Mô tả ảnh",
+      "required_opt": true
+    },
+    "class_type": "DiscordTextInput",
+    "_meta": {
+      "title": "Discord Text Input"
+    }
+  },
+  "81": {
+    "inputs": {
+      "param": "cfg",
+      "value": 1,
+      "description": "metalica",
+      "required_opt": false
+    },
+    "class_type": "DiscordFloatInput",
+    "_meta": {
+      "title": "Discord Float Input"
+    }
+  }
+}
